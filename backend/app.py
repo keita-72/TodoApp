@@ -1,6 +1,8 @@
 from flask import Flask, jsonify
+from flask_cors import CORS
 
 app = Flask(__name__)# Flaskのアプリケーションを作成する
+CORS(app)
 
 @app.route("/api/todos")# ルーティングの設定
 def get_todos():
